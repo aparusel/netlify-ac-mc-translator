@@ -1,0 +1,4 @@
+[[headers]]
+  for = "/dist/*.xml"
+    [headers.values]
+    Content-Type = "text/plain"
