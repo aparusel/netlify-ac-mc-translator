@@ -29,12 +29,12 @@ exports.handler = async function (event, context) {
   if (ac) {
     return {
       statusCode: 200,
-      body: JSON.stringify({ mc: getMc(ac) }),
+      body: JSON.stringify({ mc: getMc(ac), ac }),
     }
   }
 
   return {
     statusCode: 404,
-    body: JSON.stringify({ mc: getMc(ac), message: 'No AC defined. Using default mc' }),
+    body: JSON.stringify({ mc: getMc(ac), ac: 'No AC', message: 'No AC defined. Using default mc' }),
   }
 };
